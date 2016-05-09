@@ -8,6 +8,14 @@
     </a>
 </div>
 <div class="content collapse" ng-class="{in:op.open}">
+	<div class="tags">
+      <span
+			  ng-if="$first == false"
+			  class="tag"
+			  ng-repeat="tag in op.tags track by $index">
+        {{tag}}
+      </span>
+	</div>
     <div class="h5" ng-if="op.deprecated" swagger-translate="operationDeprected"></div>
 	<div ng-if="op.description">
 		<h5 swagger-translate="operationImplementationNotes"></h5>
